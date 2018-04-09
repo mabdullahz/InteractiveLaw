@@ -1,0 +1,246 @@
+    <!-- Header -->
+    <header id="home">
+        <!-- Background Image -->
+        <div class="bg-img" style="background-image: url('assets/me.jpg');">
+            <div class="overlay"></div>
+        </div>
+        <!-- /Background Image -->
+
+        <!-- Nav -->
+        <div id="nav" class="navbar nav-transparent">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <!-- Logo -->
+                    <div class="navbar-brand">
+                    <ul class="main-nav nav navbar-nav navbar-left">
+                    <li><a href="" style="font-size:30px;">Interactive Law</a></li>
+
+                    <li><form class="form-inline my-2 my-lg-0" >
+      <input   name="search" class="form-control mr-lg-4" type="text" placeholder="Search Article" aria-label="Search" (change) = "search($event)" (keyup.enter)="onEnterSearch()">
+
+    </form> </li>
+    <li style="margin-top:5px;"> <button  class="btn btn-outline-success" type="submit" (click) = "clicked()">Search</button></li>
+
+
+                    </ul>
+
+
+                    </div>
+                    <!-- /Logo -->
+
+                    <!-- Collapse nav button -->
+                    <div class="nav-collapse">
+                        <span></span>
+                    </div>
+                    <!-- /Collapse nav button -->
+                </div>
+
+                <!--  Main navigation  -->
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li><a href="">Home</a></li>
+                    <li><a simplePageScroll href="#info">Information</a></li>
+                    <li><a simplePageScroll href="#about">Edit Profile</a></li>
+                    <li><a simplePageScroll href="#team">Crowdsource</a></li>
+                    <li *ngIf="authservice.isloggedin()"><a (click)="onLogoutClick()">Logout</a></li>
+                </ul>
+                <!-- /Main navigation -->
+
+            </div>
+        </div>
+        <!-- /Nav -->
+
+        <!-- home wrapper -->
+        <div class="home-wrapper">
+            <div class="container">
+                <div class="row">
+
+                    <!-- home content -->
+                    <div class="col-md-10 col-md-offset-1">
+                        <div id="status" class="home-content">
+                            <h1 *ngIf="user" class="white-text">{{user.name}}</h1>
+                            <p *ngIf="user" class="white-text" style="font-size: 20px">{{user.status}}<p>
+                        </div>
+                    </div>
+                    <!-- /home content -->
+
+                </div>
+            </div>
+        </div>
+        <!-- /home wrapper -->
+
+    </header>
+
+
+
+    <!-- /Header -->
+
+
+    <div id="info" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Profile Information</h2>
+                </div>
+                <h3 *ngIf="user" class="text-center"> Email : {{user.email}} </h3>
+                <h3 *ngIf="user" class="text-center"> Phone : (092)322-9914855 </h3>
+                <h3 *ngIf="user" class="text-center"> Username : {{user.username}} </h3>
+                <h3 *ngIf="user" class="text-center"> Registration Date : 01/11/2018</h3>
+                <!-- /Section header -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /About -->
+
+    <!-- About -->
+    <div id="about" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title"> Edit Profile</h2>
+                </div>
+                <!-- /Section header -->
+
+                <!-- about -->
+                <div class="row">
+                <div class="col-md-4">
+                    <div class="about">
+                        <i class="fa fa-gavel"></i>
+                        <h3>Change Picture</h3>
+                        <button  class="btn btn-outline-success" type="submit" (click)= "clickedonphoto()">Choose Photo</button>
+                    </div>
+                </div>
+                <!-- /about -->
+                <!-- about -->
+                <div class="col-md-4">
+                    <div class="about">
+                        <i class="fa fa-gavel"></i>
+                        <h3>Status</h3>
+                        <form class="form-inline my-2 my-lg-0" >
+          <input name="status"  type="text" placeholder="Status" aria-label="Search" (change) = "statuswritten($event)"></form>
+          <button  style="margin-top:20px"class="btn btn-outline-success" type="submit" (click) = "clickedonstatus()">Update</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about">
+                        <i class="fa fa-gavel"></i>
+                        <h3>Other</h3>
+                        <a href="#">Edit</a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- /about -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /About -->
+
+    <!--Crowdsourcing-->
+    <div id="team" class="section md-padding">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Crowd-Sourcing</h2>
+                </div>
+                <!-- /Section header -->
+
+                <!-- team -->
+                <div>
+                    <div class="team">
+                        <div class="team-img">
+                            <img class="img-responsive" src="assets/slide2.png" alt="" style="height: 300px">
+                        </div>
+                        <div class="team-content">
+                            <h3><a [routerLink] = "['/crowdsource']">Contribute to the community by helping others.</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- /team -->
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <!-- /Team -->
+
+    <!-- Footer -->
+    <footer id="footer" class="sm-padding bg-dark">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <!-- footer logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><i class="fa fa-gavel fa-4x"> </i> </a>
+                    </div>
+                    <!-- /footer logo -->
+
+                    <!-- footer follow -->
+                    <ul class="footer-follow">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                    <!-- /footer follow -->
+
+                    <!-- footer copyright -->
+                    <div class="footer-copyright">
+                        <p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com" target="_blank">Codesol</a></p>
+                    </div>
+                    <!-- /footer copyright -->
+
+                </div>
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+
+        <div id="fakefile" class="col-md-4">                           
+    <span class="btn btn-info "><i class="glyphicon glyphicon-plus"> </i> Browse
+        <input type="file" style="position:relative;overflow:hidden" id="choosefile" name="image" #choosefile>
+    </span>
+</div>
+        <!-- /Container -->
+
+    </footer>
+    <!-- /Footer -->

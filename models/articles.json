@@ -1,0 +1,85 @@
+{
+"articles":[
+{
+"title": "The Republic and its territories",    
+"number": 1,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["Republic", "Federation", "Constitution", "Parliament", "Territories", "States", "Tribal", "Pakistan", "Capital", "Federal"],
+"category": ["Republic", "Territories"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Islam to be State religion",    
+"number": 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["Islam","Pakistan", "State", "Religion"],
+"category": ["Islam", "State", "Religion"],
+"crowdsource":[]
+
+},
+
+
+
+{
+"title": "Elimination of exploitation",    
+"number": 3,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["Elimination", "State", "exploitation", "fundamental", "principle"],
+"category": ["Elimination of exploitation"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Right of individuals to be dealt with in accordance with law, etc.",    
+"number": 4,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["protection", "law", "right", "citizen", "Pakistan", "enjoy", "action", "life", "liberty", "detrimental", "property", "hindered", "prohibited", "compelled"],
+"category": ["Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Loyalty to State and obedience to Constitution and law",    
+"number": 5,
+"text" : "",
+
+"lastmodified": "1985",
+
+"tags": ["Loyalty", "Constitution", "State", "Law", "basic", "duty", "citizen", "Obedience", "obligation"],
+"category": ["obedience to Constitution"],
+"crowdsource":[]
+
+},
+
+{
+"title": "High treason",    
+"number": 6,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["treason", "abrogate", "subverts", "suspends", "conspire", "Constitution", "force", "unconstitutional", "guilty", "aiding", "abetting", "validated", "Supreme Court", "High Court", "Parliament", "punishment"],
+"category": ["obedience to Constitution", "Treason"],
+"crowdsource":[]
+
+}
+
+
+]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "InteractiveLaw",
+  "version": "1.0.0",
+  "description": "Mean Stack login form app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "angular2-flash-messages": "^1.0.8",
+    "bad-words": "^1.6.1",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "swearjar": "^0.2.0",
+    "wordnet": "*"
+  },
+  "author": "Muneeb Zia",
+  "license": "ISC"
+}

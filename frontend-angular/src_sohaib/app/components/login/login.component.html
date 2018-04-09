@@ -1,0 +1,25 @@
+<div class = "container">
+<ul>
+      <div class="home">
+      <a href="" class="button">Home</a>
+      </div>
+      </ul>
+<form name="login-form" class="login-form" action="" method="post"[ngsReveal]="{ duration: 1700,
+          origin:'right',
+          distance:'300px'}"  >
+    <div class="header">
+    <h1>LOG IN</h1>
+    <span>Enter username and password</span>
+    </div>
+
+    <div class="content">
+    <input [(ngModel)] = "username" name="username" type="text" class="input username" placeholder="Username" />
+    <input [(ngModel)] = "password" name="password" type="password" class="input password" placeholder="Password" />
+    </div>
+
+    <div class="footer">
+    <a (click)="onloginsubmit()" class="button">Login</a>
+    </div>
+
+  </form>
+  </div>

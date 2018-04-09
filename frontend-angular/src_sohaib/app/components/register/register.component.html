@@ -1,0 +1,42 @@
+<div class = "container">
+
+<ul>
+  <div class="home">
+  <a href="" class="button">Home</a>
+  </div>
+</ul>
+<form (submit) = "onregistersubmit()" name="login-form" class="login-form" action="" method="post"[ngsReveal]="{ duration: 1700,
+          origin:'right',
+          distance:'300px'}"  >
+    <div class="header">
+    <h1>REGISTER</h1>
+    </div>
+
+    <div class="content">
+
+    <input name="fullname" [(ngModel)] = "name" type="text" class="input fullname" placeholder="Full Name" />
+
+    <input name="username" [(ngModel)] = "username" type="text" class="input username" placeholder="Username" />
+    <!-- <div class="user-icon"></div> -->
+    <input name="email" [(ngModel)] = "email" type="email" class="input email" placeholder="Email" />
+
+    <input name="password" [(ngModel)] = "password" type="password" class="input password" placeholder="Password" />
+
+
+    <!-- <div class="pass-icon"></div>    -->
+    </div>
+
+    <div class="footer">
+        <a href="https://www.facebook.com" class="btn btn-lg btn-social btn-facebook">
+                                    <i class="fa fa-facebook fa-2x" ></i></a>
+
+    <a href="https://www.gmail.com" class="btn btn-lg btn-social btn-google">
+    <i class="fa fa-google fa-2x" style="color: red"></i></a>
+    <button type="submit" class="button">Register</button>
+    </div>
+
+  </form>
+  <br>
+  <br>
+
+  </div>
