@@ -48,6 +48,10 @@ Table OF Contents
 
 /* -- typography -- */
 
+
+
+
+
 body {
     font-family: 'Varela Round', sans-serif;
     font-size: 16px;
@@ -62,6 +66,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0px;
     margin-bottom: 20px;
     color: #10161A;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 1; /* Firefox */
 }
 
 h1 {
@@ -102,6 +111,7 @@ a:hover, a:focus {
     color: #6195FF;
 }
 
+.mouse{ cursor: pointer; }
 .white-text {
     color: #FFF;
 }

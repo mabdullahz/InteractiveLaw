@@ -44,4 +44,27 @@ export class LoginComponent implements OnInit {
 
   }
 
+onEnterSearch() {
+    const user = {
+    username: this.username,
+    password: this.password
+  
+    }
+    this.authService.authenticateUser(user).subscribe(data=>{
+    if(data.success){
+    this.flashMessage.show("You Are logged In successfully",{cssClass: 'alert-success', timeout:3000})
+    this.authService.storeUserData(data.token,data.user)
+    this.router.navigate(['profile'])
+    
+    }
+    else{
+    this.flashMessage.show(data.msg,{cssClass: 'alert-danger', timeout:3000})
+    this.router.navigate(['login'])
+  
+    }
+  
+    });
+  
+    }
+
 }

@@ -53,4 +53,36 @@ this.flashMessage.show("Something wrong",{cssClass: 'alert-danger', timeout:3000
 
   }
 
+onEnterSearch(){
+  const user={
+  name:this.name,
+  email:this.email,
+  username:this.username,
+  password:this.password,
+  status:""
+  }
+  if(!this.validateService.validateRegister(user)){
+  this.flashMessage.show("Please fill in all the fields",{cssClass: 'alert-danger', timeout:3000});
+  return false;
+
+  }
+
+  if(!this.validateService.validateEmail(user.email)){
+ this.flashMessage.show("Please use a valid email",{cssClass: 'alert-danger', timeout:3000});
+  return false;
+  }
+
+  this.authservice.registerUser(user).subscribe(data=> {
+  if (data.success){
+  this.flashMessage.show("You are registered, and can Login",{cssClass: 'alert-success', timeout:3000})
+  this.router.navigate(['/login'])
+} else {
+this.flashMessage.show("Something wrong",{cssClass: 'alert-danger', timeout:3000})
+  this.router.navigate(['/register'])
+  
+}
+  })
+
+  }
+
 }

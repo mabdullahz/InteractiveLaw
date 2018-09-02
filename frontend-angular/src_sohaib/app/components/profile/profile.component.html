@@ -16,11 +16,8 @@
                     <ul class="main-nav nav navbar-nav navbar-left">
                     <li><a href="" style="font-size:30px;">Interactive Law</a></li>
 
-                    <li><form class="form-inline my-2 my-lg-0" >
-      <input   name="search" class="form-control mr-lg-4" type="text" placeholder="Search Article" aria-label="Search" (change) = "search($event)" (keyup.enter)="onEnterSearch()">
-
-    </form> </li>
-    <li style="margin-top:5px;"> <button  class="btn btn-outline-success" type="submit" (click) = "clicked()">Search</button></li>
+              
+    
 
 
                     </ul>
@@ -42,11 +39,48 @@
                     <li><a simplePageScroll href="#info">Information</a></li>
                     <li><a simplePageScroll href="#about">Edit Profile</a></li>
                     <li><a simplePageScroll href="#team">Crowdsource</a></li>
-                    <li *ngIf="authservice.isloggedin()"><a (click)="onLogoutClick()">Logout</a></li>
+                    <li *ngIf="authservice.isloggedin()"><a class="mouse" (click)="onLogoutClick()">Logout</a></li>
                 </ul>
                 <!-- /Main navigation -->
 
             </div>
+            
+                    <!-- Nav -->
+        <div class= "jumbotron">
+                <div class="container" >
+                        <ul class="row">
+    
+                        <li class="col-md-2"><form >
+    
+                               
+    
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="keyword"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Keyword" aria-label="Search"></form></li>
+          <li class="col-md-2"><form >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="chaptername"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Name" aria-label="Search"  ></form></li>
+          <li class="col-md-2"><form >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="chapternumber"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Number" aria-label="Search"  ></form></li>
+          <li class="col-md-2"><form  >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlename" style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Name" aria-label="Search" ></form></li>
+          <li class="col-md-2"><form>
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlenumber"   style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Number" aria-label="Search"></form></li>
+    
+    
+     <li class="col-md-2" style="margin-top:5px;"> <button  class="btn btn-primary" type="submit" (click) = "clicked()">Search</button></li>
+    
+    
+                        </ul>
+                        <!-- /Logo -->
+    
+                        <!-- Collapse nav button -->
+                        <div class="nav-collapse">
+                            <span></span>
+                        </div>
+                        <!-- /Collapse nav button -->
+    
+                </div>
+            </div>
+            <!-- /Nav -->
+
         </div>
         <!-- /Nav -->
 

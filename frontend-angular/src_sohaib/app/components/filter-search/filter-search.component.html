@@ -1,0 +1,35 @@
+        <!-- Nav -->
+        <div class= "jumbotron">
+            <div class="container" >
+                    <ul class="row">
+
+                    <li class="col-md-2"><form>
+
+                           
+
+      <input [(ngModel)]="keyword"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Keyword" aria-label="Search"></form></li>
+      <li class="col-md-2"><form >
+      <input [(ngModel)]="chaptername"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Name" aria-label="Search"  ></form></li>
+      <li class="col-md-2"><form >
+      <input [(ngModel)]="chapternumber"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Number" aria-label="Search"  ></form></li>
+      <li class="col-md-2"><form  >
+      <input [(ngModel)]="articlename" style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Name" aria-label="Search" ></form></li>
+      <li class="col-md-2"><form>
+      <input [(ngModel)]="articlenumber"   style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Number" aria-label="Search"></form></li>
+
+
+ <li class="col-md-2" style="margin-top:5px;"> <button  class="btn btn-primary" type="submit" (click) = "clicked()">Search</button></li>
+
+
+                    </ul>
+                    <!-- /Logo -->
+
+                    <!-- Collapse nav button -->
+                    <div class="nav-collapse">
+                        <span></span>
+                    </div>
+                    <!-- /Collapse nav button -->
+
+            </div>
+        </div>
+        <!-- /Nav -->

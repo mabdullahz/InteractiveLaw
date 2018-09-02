@@ -14,20 +14,8 @@
                 <div class="navbar-header">
                     <!-- Logo -->
                     <div class="navbar-brand">
-
-                            <!-- <img class="logo" src="img/logo.png" alt="logo">
-                            <img class="logo-alt" src="img/logo-alt.png" alt="logo"> -->
                     <ul class="main-nav nav navbar-nav navbar-left">
                     <li><a href="" style="font-size:30px;">Interactive Law</a></li>
-                    <!-- <li> <i class="fa fa-gavel fa-3x" style="color:blue;"></i> </li> -->
-
-                    <li><form class="form-inline my-2 my-lg-0" >
-      <input   name="search" class="form-control mr-lg-4" type="text" placeholder="Search Article" aria-label="Search" (change) = "search($event)" (keyup.enter)="onEnterSearch()">
-
-    </form> </li>
-    <li style="margin-top:5px;"> <button  class="btn btn-outline-success" type="submit" (click) = "clicked()">Search</button></li>
-
-
                     </ul>
 
 
@@ -43,24 +31,52 @@
 
                 <!--  Main navigation  -->
                 <ul class="main-nav nav navbar-nav navbar-right">
-                    <li><a href="/browse">Browse</a></li>
+                    
                     <li><a simplePageScroll href="#about">Features</a></li>
-                    <li><a simplePageScroll href="#blog">Recent Changes</a></li>
                     <li><a simplePageScroll href="#team">Team</a></li>
-
-
-
-                    <!-- <li class="has-dropdown"><a href="#blog">Blog</a>
-                        <ul class="dropdown">
-                            <li><a href="blog-single.html">blog post</a></li>
-                        </ul>
-                    </li> -->
                     <li><a simplePageScroll href="#contact">Contact</a></li>
-                    <li> <a href="/profile" *ngIf="authservice.isloggedin()"> Profile</a> </li>
+                    <li> <a class="mouse" [routerLink] = "['/profile']" *ngIf="authservice.isloggedin()"> Profile</a> </li>
                 </ul>
                 <!-- /Main navigation -->
-
+            
             </div>
+
+        <!-- Nav -->
+        <div class= "jumbotron">
+                <div class="container" >
+                        <ul class="row">
+    
+                        <li class="col-md-2"><form >
+    
+                               
+    
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="keyword"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Keyword" aria-label="Search"></form></li>
+          <li class="col-md-2"><form >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="chaptername"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Name" aria-label="Search"  ></form></li>
+          <li class="col-md-2"><form >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="chapternumber"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Number" aria-label="Search"  ></form></li>
+          <li class="col-md-2"><form  >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlename" style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Name" aria-label="Search" ></form></li>
+          <li class="col-md-2"><form>
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlenumber"   style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Number" aria-label="Search"></form></li>
+    
+    
+     <li class="col-md-2" style="margin-top:5px;"> <button  class="btn btn-primary" type="submit" (click) = "clicked()">Search</button></li>
+    
+    
+                        </ul>
+                        <!-- /Logo -->
+    
+                        <!-- Collapse nav button -->
+                        <div class="nav-collapse">
+                            <span></span>
+                        </div>
+                        <!-- /Collapse nav button -->
+    
+                </div>
+            </div>
+            <!-- /Nav -->
+
         </div>
         <!-- /Nav -->
 
@@ -110,60 +126,46 @@
 
                 <!-- about -->
                 <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="about">
                         <i class="fa fa-gavel"></i>
                         <h3>CrowdSourcing</h3>
-                        <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-                        <a href="#">Read more</a>
+                        <p>Crowd source your understanding to make people understand what the Law means. Translate and explain for the people.</p>
                     </div>
                 </div>
                 <!-- /about -->
 
                 <!-- about -->
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="about">
                         <i class="fa fa-gavel"></i>
                         <h3>Searchable</h3>
-                        <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-                        <a href="#">Read more</a>
+                        <p>Interactive Law provides in depth search capabilities to user to find exactly what they want to with just a click of a button.</p>
                     </div>
                 </div>
                 <!-- /about -->
 
-                <!-- about -->
-                <div class="col-md-3">
-                    <div class="about">
-                        <i class="fa fa-gavel"></i>
-                        <h3>Thematic explanaton</h3>
-                        <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="about">
                         <i class="fa fa-gavel"></i>
                         <h3>Direct Links</h3>
-                        <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-                        <a href="#">Read more</a>
+                        <p>Interactive Law provides links to different sources of law platforms for you to have a diverse group of resources.</p>
                     </div>
                 </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                     <div class="about">
                         <i class="fa fa-gavel"></i>
                         <h3>Legal Dictionary</h3>
-                        <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-                        <a href="#">Read more</a>
+                        <p>Find the meaning to any word with integrated dictionary in the platform to reduce hindrance in the process of learning.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="about">
                         <i class="fa fa-gavel"></i>
                         <h3>Ammendments</h3>
-                        <p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
-                        <a href="#">Read more</a>
+                        <p>Up to date ammendments and modifications are added frequently to the platform to keep its users updated and moving forward.</p>
                     </div>
                 </div>
 
@@ -178,20 +180,6 @@
 
     </div>
     <!-- /About -->
-
-
-    <!-- Portfolio -->
-
-    <!-- /Portfolio -->
-
-    <!-- Service -->
-    <!-- /Service -->
-
-
-    <!-- Why Choose Us -->
-
-    <!-- /Why Choose Us -->
-
 
     <!-- Numbers -->
     <div id="numbers" class="section sm-padding">
@@ -212,7 +200,7 @@
                 <div class="col-sm-4 col-xs-6">
                     <div class="number">
                         <i class="fa fa-users"></i>
-                        <h3 class="white-text"><span class="counter">20</span></h3>
+                        <h3 class="white-text"><span class="counter">28</span></h3>
                         <span class="white-text">Chapters</span>
                     </div>
                 </div>
@@ -222,7 +210,7 @@
                 <div class="col-sm-4 col-xs-6">
                     <div class="number">
                         <i class="fa fa-trophy"></i>
-                        <h3 class="white-text"><span class="counter">230</span></h3>
+                        <h3 class="white-text"><span class="counter">280</span></h3>
                         <span class="white-text">Articles</span>
                     </div>
                 </div>
@@ -232,7 +220,7 @@
                 <div class="col-sm-4 col-xs-6">
                     <div class="number">
                         <i class="fa fa-coffee"></i>
-                        <h3 class="white-text"><span class="counter">20</span></h3>
+                        <h3 class="white-text"><span class="counter">27</span></h3>
                         <span class="white-text">Ammendments</span>
                     </div>
                 </div>
@@ -273,9 +261,8 @@
                             <img class="img-responsive" src="assets/Sohaib.jpg" alt="">
                             <div class="overlay">
                                 <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/sohaib.arshid.9"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://plus.google.com/+SohaibArshid"><i class="fa fa-google-plus"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -294,9 +281,8 @@
                             <img class="img-responsive" src="assets/talal.jpg" alt="">
                             <div class="overlay">
                                 <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/talal.muneer"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -315,9 +301,8 @@
                             <img class="img-responsive" src="assets/me.jpg" alt="">
                             <div class="overlay">
                                 <div class="team-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/sheikh.m.zia.7"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -337,91 +322,6 @@
 
     </div>
     <!-- /Team -->
-
-    <!-- Blog -->
-    <div id="blog" class="section md-padding bg-grey">
-
-        <!-- Container -->
-        <div class="container">
-
-            <!-- Row -->
-            <div class="row">
-
-                <!-- Section header -->
-                <div class="section-header text-center">
-                    <h2 class="title">Recents news</h2>
-                </div>
-                <!-- /Section header -->
-
-                <!-- blog -->
-                <div class="col-md-4">
-                    <div class="blog">
-                        <div class="blog-img">
-                            <img class="img-responsive" src="./img/blog1.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="blog-meta">
-                                <!-- <li><i class="fa fa-user"></i>John doe</li> -->
-                                <li><i class="fa fa-clock-o"></i>18 Oct</li>
-                                <!-- <li><i class="fa fa-comments"></i>57</li> -->
-                            </ul>
-                            <h3>Ammendment in Article 64</h3>
-                            <p>Article 64 is ammended..</p>
-                            <a href="blog-single.html">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /blog -->
-
-                <!-- blog -->
-                <div class="col-md-4">
-                    <div class="blog">
-                        <div class="blog-img">
-                            <img class="img-responsive" src="./img/blog2.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="blog-meta">
-                                <!-- <li><i class="fa fa-user"></i>John doe</li> -->
-                                <!-- <li><i class="fa fa-user"></i>John doe</li> -->
-                                <li><i class="fa fa-clock-o"></i>18 Oct</li>
-                                <!-- <li><i class="fa fa-comments"></i>57</li> -->
-                            </ul>
-                            <h3>Ammendment in Article 64</h3>
-                            <p>Article 64 is ammended..</p>
-                            <a href="blog-single.html">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /blog -->
-
-                <!-- blog -->
-                <div class="col-md-4">
-                    <div class="blog">
-                        <div class="blog-img">
-                            <img class="img-responsive"  src="./img/blog3.jpg" alt="">
-                        </div>
-                        <div class="blog-content">
-                        <ul class="blog-meta">
-                            <!-- <li><i class="fa fa-user"></i>John doe</li> -->
-                                <li><i class="fa fa-clock-o"></i>18 Oct</li>
-                                <!-- <li><i class="fa fa-comments"></i>57</li> -->
-                            </ul>
-                            <h3>Ammendment in Article 64</h3>
-                            <p>Article 64 is ammended..</p>
-                            <a href="blog-single.html">Read more</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /blog -->
-
-            </div>
-            <!-- /Row -->
-
-        </div>
-        <!-- /Container -->
-
-    </div>
-    <!-- /Blog -->
 
     <!-- Contact -->
     <div id="contact" class="section md-padding">
@@ -453,7 +353,7 @@
                     <div class="contact">
                         <i class="fa fa-envelope"></i>
                         <h3>Email</h3>
-                        <p>email@lums.edu.pk</p>
+                        <p>luminite143@gmail.com</p>
                     </div>
                 </div>
                 <!-- /contact -->
@@ -467,18 +367,6 @@
                     </div>
                 </div>
                 <!-- /contact -->
-
-                <!-- contact form -->
-                <!-- <div class="col-md-8 col-md-offset-2">
-                    <form class="contact-form">
-                        <input type="text" class="input" placeholder="Name">
-                        <input type="email" class="input" placeholder="Email">
-                        <input type="text" class="input" placeholder="Subject">
-                        <textarea class="input" placeholder="Message"></textarea>
-                        <button class="main-btn">Send message</button>
-                    </form>
-                </div> -->
-                <!-- /contact form -->
 
             </div>
             <!-- /Row -->
@@ -508,19 +396,19 @@
                     <!-- /footer logo -->
 
                     <!-- footer follow -->
-                    <ul class="footer-follow">
+                    <!-- <ul class="footer-follow">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    </ul>
+                    </ul> -->
                     <!-- /footer follow -->
 
                     <!-- footer copyright -->
                     <div class="footer-copyright">
-                        <p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com" target="_blank">Codesol</a></p>
+                        <p>Copyright © 2017. All Rights Reserved to Lahore University of Management Sciences, Lahore</p>
                     </div>
                     <!-- /footer copyright -->
 
@@ -536,14 +424,12 @@
     <!-- /Footer -->
 
     <!-- Preloader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="preloader">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
         </div>
-    </div>
+    </div> -->
     <!-- /Preloader -->
-
-    <!-- jQuery Plugins -->

@@ -6,29 +6,47 @@ const fs = require('fs');
 function insertarticle(article,callback){
     var date= new Date(article.lastmodified);
     var year= date.getFullYear()
-    
+    var newarticle
+    if (article.chaptername != null){
 
-let newarticle = new Article({
+    newarticle = new Article({
 
-	title:article.title,
+	title:article.title.split(" ").map(n=>n.toLowerCase()),
 	number:article.number,
-
 	text: article.text,
-
-	lastmodified: year,
-
+	lastmodified: article.lastmodified,
 	tags: article.tags.map(tag => tag.toLowerCase()),
-    category: article.category.map(cat => cat.toLowerCase())
+    category: article.category.map(cat => cat.toLowerCase()),
+    chaptername: article.chaptername.split(" ").map(n=>n.toLowerCase()),
+    chapternum: article.chapternum
 
 })
+    }
+    else {
+    newarticle = new Article({
+
+            title:article.title.split(" "),
+            number:article.number,
+            text: article.text,
+            lastmodified: year,
+            tags: article.tags.map(tag => tag.toLowerCase()),
+            category: article.category.map(cat => cat.toLowerCase()),
+            chaptername: null,
+            chapternum: null
+        
+        })
+    }
+
+
+let newtags = article.text.split(" ");
+for (var i of newtags){
+
+    newarticle.tags.push(i);
+}
 
 newarticle.save(callback)
 
 }
-
-
-
-
 
 
 function read(file, callback) {
@@ -48,10 +66,10 @@ var articles;
 //var fs = require('fs');
 
 
-read('articlenew.txt', function(data) {
+read('articlenew_talal.txt', function(data) {
     art = data;
     arrayofarticlestext = art.split('@')
-    var obj = JSON.parse(fs.readFileSync('articlesnew.json', 'utf8'));
+    var obj = JSON.parse(fs.readFileSync('articles_talal.json', 'utf8'));
     console.log(obj.articles.length)
     console.log(arrayofarticlestext.length)
     articles=obj.articles;
@@ -59,6 +77,7 @@ read('articlenew.txt', function(data) {
     for(var i = 0; i < arrayofarticlestext.length;i++){
 
         articles[i].text=arrayofarticlestext[i]
+        console.log(articles[0].text[0])
         insertarticle(articles[i],(err,data)=>{
 
             if(err){
@@ -69,6 +88,7 @@ read('articlenew.txt', function(data) {
         })
 
     }
+    
 
 
 

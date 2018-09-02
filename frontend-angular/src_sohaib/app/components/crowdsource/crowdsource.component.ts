@@ -14,6 +14,25 @@ declare var displayon : any;
 })
 export class CrowdsourceComponent implements OnInit {
 
+  checkdata(x){
+
+    if(x==""||x==undefined){
+    
+      return false;
+    }
+    return true;
+    
+    }
+articlename:any;
+articlenumberold:any;
+chaptername:any;
+chapternumber:any;
+keyword:any;
+articlelist:any;
+ flag:any
+
+
+
   badword:any;
   lang:any;
   articlenumber:any;
@@ -32,6 +51,9 @@ export class CrowdsourceComponent implements OnInit {
   username: String;
   date : String;
 
+
+  
+
   ngOnInit() {
   this.lang="english";
     this.authservice.getProfile().subscribe(profile=>{ 
@@ -46,20 +68,103 @@ export class CrowdsourceComponent implements OnInit {
         }) 
   }
 
-  search(event){
-  this.searchquery = event.target.value;
-  }
+  
+
+
 
   clicked(){
-  this.router.navigate(['/search',this.searchquery]);
-  }
 
+    var artn,chpn,keyw;
+    let myarray = [this.keyword,this.chaptername,this.chapternumber,this.articlename,this.articlenumberold]
+    this.flag = myarray.map(x => this.checkdata(x));
+    if(this.keyword!=undefined && this.keyword!=""){
+      keyw = this.keyword.split(" ");
+    }
+    if(this.articlename!=undefined && this.articlename!=""){
+      artn = this.articlename.split(" ");
+    }
+    if(this.chaptername!=undefined && this.chaptername!=""){
+      chpn = this.chaptername.split(" ");
+    }
+    
+     const searchedquery = {
+     articlename:artn,
+     articlenumber:this.articlenumberold,
+     chaptername:chpn,
+     chapternumber:this.chapternumber,
+     keyword:keyw,
+     flag: this.flag
+     }
+    
+     
+     console.log(searchedquery)
+      this.authservice.send_searchquery(searchedquery).subscribe(data=> {
+      if(data.searched){
+      
+      this.flag=[false,false,false,false,false];
+      this.articlelist = data.articleslist;
+      this.authservice.savefilteredarticles(this.articlelist);
+      this.router.navigate(['finsearch']);
+    
+      
+      }else{
+      console.log("ELSE ME AGYA BHAII JAAAN")
+      this.authservice.savefilteredarticles([]);
+      //this.simplePageScrollService.scrollToElement("#about",0)
+      }
+      
+      })
+       
+    
+    
+      }
 
-onEnterSearch(){
-  
-this.router.navigate(['/search',this.searchquery]);
+    onEnterSearch(){
 
-}
+        var artn,chpn,keyw;
+        let myarray = [this.keyword,this.chaptername,this.chapternumber,this.articlename,this.articlenumberold]
+        this.flag = myarray.map(x => this.checkdata(x));
+        if(this.keyword!=undefined && this.keyword!=""){
+          keyw = this.keyword.split(" ");
+        }
+        if(this.articlename!=undefined && this.articlename!=""){
+          artn = this.articlename.split(" ");
+        }
+        if(this.chaptername!=undefined && this.chaptername!=""){
+          chpn = this.chaptername.split(" ");
+        }
+        
+         const searchedquery = {
+         articlename:artn,
+         articlenumber:this.articlenumberold,
+         chaptername:chpn,
+         chapternumber:this.chapternumber,
+         keyword:keyw,
+         flag: this.flag
+         }
+        
+         
+         console.log(searchedquery)
+          this.authservice.send_searchquery(searchedquery).subscribe(data=> {
+          if(data.searched){
+          
+          this.flag=[false,false,false,false,false];
+          this.articlelist = data.articleslist;
+          this.authservice.savefilteredarticles(this.articlelist);
+          this.router.navigate(['finsearch']);
+        
+          
+          }else{
+          console.log("ELSE ME AGYA BHAII JAAAN")
+          this.authservice.savefilteredarticles([]);
+          //this.simplePageScrollService.scrollToElement("#about",0)
+          }
+          
+          })
+           
+        
+        
+          }
 
 
 

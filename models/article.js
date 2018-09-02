@@ -5,7 +5,7 @@ mongoose.connect(config.database)
 const ArticleSchema = mongoose.Schema({
 
 	title:{
-		type: String,
+		type: Array,
 		require: true
 	},
 	number:{
@@ -15,12 +15,12 @@ const ArticleSchema = mongoose.Schema({
 
 	text :{
 		type: String,
-		require: true
+		require: true,
 	},
 
 	lastmodified:{
 
-		type: Date
+		type: String
 	},
 
 	tags:{
@@ -31,6 +31,12 @@ const ArticleSchema = mongoose.Schema({
 	},
 	crowdsource:{
 		type:Array
+	},
+	chaptername: {
+		type: Array
+	},
+	chapternum: {
+		type: Number
 	}
 
 })

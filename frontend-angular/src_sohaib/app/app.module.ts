@@ -2,28 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {RouterModule,Routes} from "@angular/router";
+import { RouterModule,Routes} from "@angular/router";
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+//import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+//import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {ValidateService} from "./services/validate.service";
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import {AuthService} from "./services/auth.service";
 import {PopoverModule} from "ng2-popover";
 import {AuthGuard} from "./guards/auth.guard";
-import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
+    
 import {NgsRevealModule} from 'ng-scrollreveal';
-import { TourComponent } from './components/tour/tour.component';
+
 import { SearchComponent } from './components/search/search.component';
-import { TestComponent } from './components/test/test.component';
+
 import {Ng2SimplePageScrollModule} from 'ng2-simple-page-scroll';
 import { Ng2ScrollableModule } from 'ng2-scrollable';
 import { CrowdsourceComponent } from './components/crowdsource/crowdsource.component';
-import { BrowseComponent } from './components/browse/browse.component';
+
+import { FilterSearchComponent } from './components/filter-search/filter-search.component';
+import { FinsearchComponent } from './components/finsearch/finsearch.component';
+import { ShowarticleComponent } from './components/showarticle/showarticle.component';
 
  
 
@@ -34,15 +37,12 @@ const appRoutes :Routes = [
 {path:"" , component: HomeComponent},
 { path :'register',component:RegisterComponent},
 { path:'login', component : LoginComponent},
-{ path:'dashboard', component : DashboardComponent},
-
 {path:'search/:id', component : SearchComponent},
 {path:'crowdsource', component : CrowdsourceComponent},
 {path:'profile', component : ProfileComponent },
-{path:'tour', component : TourComponent },
-{path: 'test', component: TestComponent},
-{path: 'bookmarks',component:BookmarksComponent},
-{path: 'browse',component: BrowseComponent}
+{path: 'filter-search', component: FilterSearchComponent},
+{path: 'finsearch', component: FinsearchComponent},
+{path:'showarticle', component:ShowarticleComponent}
 
 ];
 
@@ -50,18 +50,20 @@ const appRoutes :Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    DashboardComponent,
+   
     ProfileComponent,
-    BookmarksComponent,
-    TourComponent,
+   
     SearchComponent,
-    TestComponent,
+    
     CrowdsourceComponent,
-    BrowseComponent,
+   
+    FilterSearchComponent,
+    FinsearchComponent,
+    ShowarticleComponent,
     ],
   imports: [
     BrowserModule,

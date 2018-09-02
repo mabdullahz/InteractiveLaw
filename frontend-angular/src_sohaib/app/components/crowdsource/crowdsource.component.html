@@ -13,14 +13,10 @@
             <li><a href="" style="font-size:30px;">Interactive Law</a></li>
             <!-- <li> <i class="fa fa-gavel fa-3x" style="color:blue;"></i> </li> -->
 
-            <li><form class="form-inline my-2 my-lg-0" >
-<input   name="search" class="form-control mr-lg-4" type="text" placeholder="Search Article" aria-label="Search" (change) = "search($event)"  (keyup.enter)="onEnterSearch()">
-
-</form> </li>
-<li style="margin-top:5px;"> <button  class="btn btn-outline-success" type="submit" (click) = "clicked()">Search</button></li>
+      
 
 
-            </ul>
+            </ul> 
 
 
             </div>
@@ -44,15 +40,55 @@
                 </ul>
             </li> -->
             
-            <li> <a href="/profile" *ngIf="authservice.isloggedin()"> Profile</a> </li>
+            <li> <a class="mouse" [routerLink]="['/profile']" *ngIf="authservice.isloggedin()"> Profile</a> </li>
         </ul>
-
-
-        
 
         <!-- /Main navigation -->
 
     </div>
+    
+
+
+        <!-- Nav -->
+        <div class= "jumbotron">
+            <div class="container" >
+                    <ul class="row">
+
+                    <li class="col-md-2"><form >
+
+                           
+
+      <input (keyup.enter)="onEnterSearch()" [(ngModel)]="keyword"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Keyword" aria-label="Search"></form></li>
+      <li class="col-md-2"><form >
+      <input (keyup.enter)="onEnterSearch()" [(ngModel)]="chaptername"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Name" aria-label="Search"  ></form></li>
+      <li class="col-md-2"><form >
+      <input (keyup.enter)="onEnterSearch()" [(ngModel)]="chapternumber"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Number" aria-label="Search"  ></form></li>
+      <li class="col-md-2"><form  >
+      <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlename" style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Name" aria-label="Search" ></form></li>
+      <li class="col-md-2"><form>
+      <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlenumberold"   style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Number" aria-label="Search"></form></li>
+
+
+ <li class="col-md-2" style="margin-top:5px;"> <button  class="btn btn-primary" type="submit" (click) = "clicked()">Search</button></li>
+
+
+                    </ul>
+                    <!-- /Logo -->
+
+                    <!-- Collapse nav button -->
+                    <div class="nav-collapse">
+                        <span></span>
+                    </div>
+                    <!-- /Collapse nav button -->
+
+            </div>
+        </div>
+        <!-- /Nav -->
+
+
+
+
+
 </div>
 <div class="home-wrapper">
             <div class="container">
@@ -83,7 +119,8 @@
 
 
 <br><br>
-     <div *ngIf="article" class="container" id="article">
+<div class="container">
+     <div *ngIf="article" id="article">
   <div id="blog">
 
     <!-- Container -->
@@ -108,10 +145,10 @@
             </div>
 
             <!-- blog tags -->
-            <div class="blog-tags">
+            <!-- <div class="blog-tags">
               <h5>Tags :</h5>
                <a href="#" *ngFor="let t of article.tags">{{t}}</a>
-            </div>
+            </div> -->
             <div class="blog-tags">
               <h5>Last Modified : </h5> <div style="display:inline; font-size:15px"> {{article.lastmodified}} </div> 
 
@@ -201,6 +238,9 @@
 
   </div>
   </div>
+  <!-- <div id="article">
+
+  </div> -->
 
 
 <div *ngIf="article" id="crowdsource" class="container">
@@ -215,7 +255,7 @@
       <p><b>Language you used for crowdsourcing:</b> </p>
       <label class="checkbox-inline"><input name = "lang" type="radio" value="english" checked="checked" [(ngModel)]="lang">English</label>
       <label class="checkbox-inline"><input name = "lang" type="radio" value="urdu" [(ngModel)]="lang">Urdu</label>
-      <label class="checkbox-inline"><input name = "lang" type="radio" value="rom-urdu" [(ngModel)]="lang">Roman Urdu</label>
+      <label class="checkbox-inline"><input name = "lang" type="radio" value="Roman Urdu" [(ngModel)]="lang">Roman Urdu</label>
       <label class="checkbox-inline"><input name = "lang" type="radio" value="other" [(ngModel)]="lang">Other</label>      
       <br>
       <br>

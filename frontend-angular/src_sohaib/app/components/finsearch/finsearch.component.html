@@ -1,0 +1,202 @@
+<!-- Nav -->
+<div id="nav" class="navbar nav-transparent">
+    <div class="container"  style="background-color:  rgb(80, 54, 33); min-width: 100%;">
+
+        <div class="navbar-header">
+            <!-- Logo -->
+            <div class="navbar-brand">
+            <ul class="main-nav nav navbar-nav navbar-left">
+            <li><a href="" style="font-size:30px;">Interactive Law</a></li>
+<!-- 
+            <li><form class="form-inline my-2 my-lg-0" >
+<input   name="search" class="form-control mr-lg-4" type="text" placeholder="Search Article" aria-label="Search" (change) = "search($event)"  (keyup.enter)="onEnterSearch()">
+
+</form> </li>
+<li style="margin-top:5px;"> <button  class="btn btn-outline-success" type="submit" (click) = "clicked()">Search</button></li> -->
+
+
+            </ul>
+
+
+            </div>
+            <!-- /Logo -->
+
+            <!-- Collapse nav button -->
+            
+            <!-- /Collapse nav button -->
+        </div>
+
+        <!--  Main navigation  -->
+        <ul class="main-nav nav navbar-nav navbar-right">
+            <li><a href="">Home</a></li>
+
+            
+            <li> <a class="mouse" [routerLink] = "['/profile']" *ngIf="authService.isloggedin()"> Profile</a> </li>
+        </ul>
+
+        <!-- /Main navigation -->
+
+    </div>
+            <!-- Nav -->
+            <div class= "jumbotron">
+                <div class="container" >
+                        <ul class="row">
+    
+                        <li class="col-md-2"><form >
+    
+                               
+    
+          <input [(ngModel)]="keyword"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Keyword" aria-label="Search" (keyup.enter)="onEnterSearch()"></form></li>
+          <li class="col-md-2"><form >
+          <input [(ngModel)]="chaptername"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Name" aria-label="Search" (keyup.enter)="onEnterSearch()" ></form></li>
+          <li class="col-md-2"><form >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="chapternumber"  style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Chapter Number" aria-label="Search"  ></form></li>
+          <li class="col-md-2"><form  >
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlename" style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Name" aria-label="Search" ></form></li>
+          <li class="col-md-2"><form>
+          <input (keyup.enter)="onEnterSearch()" [(ngModel)]="articlenumber"   style = "border: 2px solid blue;" name="search" class="form-control mr-lg-4" type="text" placeholder="Article Number" aria-label="Search"></form></li>
+    
+    
+     <li class="col-md-2" style="margin-top:5px;"> <button  class="btn btn-primary" type="submit" (click) = "clicked()">Search</button></li>
+    
+    
+                        </ul>
+                        <!-- /Logo -->
+    
+                </div>
+            </div>
+            <!-- /Nav -->
+</div>
+
+
+   <div class="container" id = "contain">
+
+      <!-- Row -->
+      <div class="row">
+
+        <!-- Main -->
+           <aside id="aside" class="col-md-3">
+
+          <!-- Category -->
+          <div class="widget">
+
+            <h3 class="title" style="color:black;">Advance Search</h3>
+            <div class="widget-category">
+              <p style="color:black;"><b> Category </b></p>
+                  <div class="row" *ngFor= "let d of allcat">
+                      <div class="checkbox">
+                          <label>
+                            <input id={{d}} name="cat" type="checkbox"(click)="filterDatacat($event)">
+                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                            {{d}}
+                          </label>
+                          <!-- <div></div>
+                          <br>
+                          <br> -->
+                        </div>
+       
+    </div>
+    
+            </div>
+            <div class="widget-category">
+                    <p style="color:black;"><b>Last Modified Date</b></p>
+                     <div class="row" *ngFor= "let d of alldates">
+                <div class="checkbox">
+                  <label>
+                    <input id={{d}} name="date" type="checkbox"(click)="filterData($event)">
+                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                    {{d}}
+                  </label>
+                </div>
+            </div>
+           
+
+                    <div class="row" *ngFor= "let d of num">
+                            <div >
+                            <br>
+                            </div>
+                        </div>
+                        <div class="row" *ngFor= "let d of num">
+                                <div >
+                                <br>
+                                </div>
+                            </div>
+                            <div class="row" *ngFor= "let d of num">
+                                    <div >
+                                    <br>
+                                    </div>
+                                </div>
+                                <div class="row" *ngFor= "let d of num">
+                                        <div >
+                                        <br>
+                                        </div>
+                                    </div>
+                    
+                    </div> 
+          </div>
+
+         
+
+        
+          <!-- /Category -->
+          <div></div>
+          <div></div>
+          <div></div>
+
+        </aside>
+        
+        
+    
+        
+    <div *ngIf = "articles" class="col-md-9">
+   
+    <h2>Search Results</h2>
+    <flash-messages> </flash-messages>
+    <div class="row" *ngFor= "let art of articles">
+    <div  class="jumbotron">
+    <div class="row">
+       <h3 class="col-md-3"> Chapter {{art.chapternum}} : </h3>
+        <h3 class="col-md-9"> {{art.chaptername}} </h3>
+    </div>
+    <div class="row">
+        <h4 class="col-md-3"> Article {{art.number}} : </h4>
+         <h4 class="col-md-9"> {{art.title}} </h4>
+     </div>
+
+     <div class="row">
+        <h5 class="col-md-3">Content :  </h5>
+         <div class="col-md-9"> {{(art.text | slice:0:26)+"...."}} 
+            <a id={{art.number}} class="mouse" (click)="show($event);"> View </a>
+         </div>
+        
+     </div>
+
+     
+
+    <div class = "row">
+      <div class="col-md-3">
+    <a href="assets/{{art.chapternum}}.pdf" download>Download</a>
+
+  </div>
+  </div>
+    
+   </div>
+   </div>
+   
+   
+        </div>
+
+        </div>
+        </div>
+
+        <div class="container">
+
+
+
+        </div>
+
+        
+        
+
+        
+

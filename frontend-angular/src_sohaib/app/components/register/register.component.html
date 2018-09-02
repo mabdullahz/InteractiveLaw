@@ -14,13 +14,13 @@
 
     <div class="content">
 
-    <input name="fullname" [(ngModel)] = "name" type="text" class="input fullname" placeholder="Full Name" />
+    <input (keyup.enter)="onEnterSearch()" name="fullname" [(ngModel)] = "name" type="text" class="input fullname" placeholder="Full Name" />
 
-    <input name="username" [(ngModel)] = "username" type="text" class="input username" placeholder="Username" />
+    <input (keyup.enter)="onEnterSearch()" name="username" [(ngModel)] = "username" type="text" class="input username" placeholder="Username" />
     <!-- <div class="user-icon"></div> -->
-    <input name="email" [(ngModel)] = "email" type="email" class="input email" placeholder="Email" />
+    <input (keyup.enter)="onEnterSearch()" name="email" [(ngModel)] = "email" type="email" class="input email" placeholder="Email" />
 
-    <input name="password" [(ngModel)] = "password" type="password" class="input password" placeholder="Password" />
+    <input (keyup.enter)="onEnterSearch()" name="password" [(ngModel)] = "password" type="password" class="input password" placeholder="Password" />
 
 
     <!-- <div class="pass-icon"></div>    -->

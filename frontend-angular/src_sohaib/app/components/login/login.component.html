@@ -13,8 +13,8 @@
     </div>
 
     <div class="content">
-    <input [(ngModel)] = "username" name="username" type="text" class="input username" placeholder="Username" />
-    <input [(ngModel)] = "password" name="password" type="password" class="input password" placeholder="Password" />
+    <input (keyup.enter)="onEnterSearch()" [(ngModel)] = "username" name="username" type="text" class="input username" placeholder="Username" />
+    <input (keyup.enter)="onEnterSearch()" [(ngModel)] = "password" name="password" type="password" class="input password" placeholder="Password" />
     </div>
 
     <div class="footer">

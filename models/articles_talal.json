@@ -1,0 +1,664 @@
+{
+"articles":[
+{
+"title": "The Republic and its territories",    
+"number": "1",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "2010",
+
+"tags":["Republic", "Federation", "Constitution", "Parliament", "Territories", "States", "Tribal", "Pakistan", "Capital", "Federal"],
+"category": ["Republic", "Territories"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Islam to be State religion",    
+"number": "2",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "1973",
+
+"tags":["Islam","Pakistan", "State", "Religion"],
+"category": ["Islam", "State", "Religion"],
+"crowdsource":[]
+
+},
+
+{
+"title": "The Objectives Resolution to form part of substantive provisions",    
+"number": "2A",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "1985",
+
+"tags":["Objectives","Resolution", "substantive", "provisions", "Constitution", "effect", "annex"],
+"category": ["Objectives Resolution"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Elimination of exploitation",    
+"number": "3",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "1973",
+
+"tags":["Elimination", "State", "exploitation", "fundamental", "principle"],
+"category": ["Elimination of exploitation"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Right of individuals to be dealt with in accordance with law, etc.",    
+"number": "4",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "1973",
+
+"tags":["protection", "law", "right", "citizen", "Pakistan", "enjoy", "action", "life", "liberty", "detrimental", "property", "hindered", "prohibited", "compelled"],
+"category": ["Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Loyalty to State and obedience to Constitution and law",    
+"number": "5",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "1985",
+
+"tags": ["Loyalty", "Constitution", "State", "Law", "basic", "duty", "citizen", "Obedience", "obligation"],
+"category": ["obedience to Constitution"],
+"crowdsource":[]
+
+},
+
+{
+"title": "High treason",    
+"number": "6",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "2010",
+
+"tags":["treason", "abrogate", "subverts", "suspends", "conspire", "Constitution", "force", "unconstitutional", "guilty", "aiding", "abetting", "validated", "Supreme Court", "High Court", "Parliament", "punishment"],
+"category": ["obedience to Constitution", "Treason"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Definition of the State",    
+"number": "7",
+"text" : "",
+"chaptername": "No Chapter",
+"chapternum" : null,
+
+"lastmodified": "1985",
+
+"tags": ["State", "Federal", "Government", "Majlis-e-Shoora","Parliament", "assembly", "Provincial", "local", "authorities", "Pakistan", "law", "empower", "impose", "tax", "cess" ],
+"category": ["State Definition"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Laws inconsistent with or in derogation of fundamental rights to be void",    
+"number": "8",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1975",
+
+"tags":["fundamental","rights", "derogation", "force", "inconsistent", "abridges", "contravention", "armed forces", "police", "forces", "public", "maintainence", "discharge", "provision", "Legislature", "Resolution"],
+"category": ["fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Security of person",    
+"number": "9",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["Security", "life", "liberty", "law"],
+"category": ["Security", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Safeguards as to arrest and detention",    
+"number": "10",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1975",
+
+"tags":["arrest","detain", "custody", "inform", "grounds", "denied", "right", "consult", "attorny", "lawyer", "legal practitioner", "magistrate", "authority", "clauses", "detention", "prejudical", "integrity", "defence", "Pakistan", "external affairs", "Chief Justice", "Supreme Court", "High Court", "enemy", "anti-national","rights"],
+"category": ["arrest", "detention", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Right to fair trial",    
+"number": "10A",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["Security", "right","fair", "trial", "civil rights", "law","rights"],
+"category": ["Security", "civil rights","fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Slavery, forced labour , etc. prohibited",    
+"number": "11",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","Slavery", "right", "forbidden", "forced", "traffic", "law", "factory", "mine", "punishment", "public", "human", "cruel", "offence"],
+"category": ["labour", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Protection against retrospective punishment",    
+"number": "12",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","law", "protection", "authorize","punishment", "act", "omission", "penalty", "abrogation", "subversion", "Constitution", "Pakistan"],
+"category": ["protection", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Protection against double punishment and self incrimination",    
+"number": "13",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","protection", "punishment", "incrimination", "prosecuted", "punishment", "offence", "accused", "compelled", "witness"],
+"category": ["protection", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Inviolability of dignity of man , etc.",    
+"number": "14",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","Inviolability", "dignity", "law", "privacy", "Inviolability", "torture", "evidence"],
+"category": ["dignity", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Freedom of movement , etc.",    
+"number": "15",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","Freedom", "movement", "citizen", "right", "subject", "restriction", "impose", "Pakistan"],
+"category": ["Freedom", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Freedom of assembly",    
+"number": "16",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","Freedom", "citizen", "right", "assembly", "restriction", "impose", "Pakistan"],
+"category": ["Freedom", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Freedom of association",    
+"number": "17",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["rights","Freedom", "citizen", "right", "association", "union", "impose", "restriction", "integrity","public", "political", "sovereignty", "Federal", "Government", "decleration", "Supreme Court", "Pakistan", "prejudical", "law"],
+"category": ["Freedom", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Freedom of trade , business or profession",    
+"number": "18",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","Freedom", "trade", "business", "profession", "qualification", "profession", "license", "commerce", "industry", "Federal", "Provincial"],
+"category": ["Freedom", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Freedom of speech , etc.",    
+"number": "19",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1975",
+
+"tags":["rights","Freedom", "speech", "citizen", "right", "expression", "press", "restriction", "integrity", "Islam", "Security", "defence","foreign", "Court", "offence"],
+"category": ["Freedom", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Right to information",    
+"number": "19A",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["rights","Freedom", "information", "speech", "citizen", "right", "expression", "regulation", "restriction", "public", "law"],
+"category": ["Freedom", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Freedom to profess religion and to manage religious institutions",    
+"number": "20",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","law", "public", "morality", "citizen", "expression", "right", "profes", "religion", "institutions"],
+"category": ["Religion", "Freedom", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Safeguard against taxation for purposes of any particular religion",    
+"number": "21",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","taxation", "religion", "compelled", "tax", "propogate"],
+"category": ["Religion", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Safeguards as to educational institutions in respect of religion , etc.",    
+"number": "22",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","educational", "institution", "religion", "ceremony", "worship", "discrimination", "community", "taxation", "citizen", "denied", "admission", "revenues"],
+"category": ["Religion", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Provision as to property",    
+"number": "23",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","citizen", "right", "acquire", "property", "Pakistan", "Constitution", "restriction"],
+"category": ["property rights", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Protection of property rights.",    
+"number": "24",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","provision", "compulsory", "deprive", "property", "law", "authority", "compensation", "principle", "validated", "life", "health", "unfair", "possession", "administration", "enemy", "manage", "housing", "medical", "compensation", "law", "Court"],
+"category": ["property rights", "civil rights","fundamental", "Human Rights"],
+"crowdsource":[]
+},
+
+{
+"title": "Equality of citizens ",    
+"number": "25",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["rights","citizen", "Equality", "law", "protection", "discrimination", "sex", "articles", "State", "provision", "protection", "women", "children"],
+"category": ["Equality", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Right to education",    
+"number": "25A",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["rights","citizen", "right", "State", "education", "children", "law"],
+"category": ["education", "civil rights", "fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Non-discrimination in respect of access to public places",    
+"number": "26",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","citizen", "right", "access", "public", "entertainment", "religious", "discrimination", "race", "religion", "caste", "sex", "residence", "clauses", "State", "provision", "women", "children" ],
+"category": ["discrimination", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Safeguard against discrimination in services",    
+"number": "27",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["rights","citizen", "appointment", "discrimination", "race", "religion", "caste", "sex", "residence", "secure", "sex", "services", "Majlis-e-Shoora"],
+"category": ["discrimination", "civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+
+{
+"title": "Preservation of language, script and culture",    
+"number": "28",
+"chaptername": "Fundamental Rights",
+"chapternum" : 1,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["rights","Preservation", "language", "script", "culture", "citizen", "right", "promote", "institution"],
+"category": ["civil rights" ,"fundamental", "Human Rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Principles of Policy",    
+"number": "29",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["Freedom", "organ", "Principles of Policy", "authority", "State", "principle", "resources", "available", "President",  "affairs", "Federation", "governer", "province", "Parliament", "Majlis-e-Shoora", "Provincial assembly", "implementation", "national assembly", "senate" ],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Responsibility with respect to Principles of Policy",    
+"number": "30",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["action", "organ", "authority", "State", "person", "grounds", "against"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Islamic way of life",    
+"number": "31",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1985",
+
+"tags":["muslims", "Pakistan", "individuals", "lives", "fundamental Principles", "Islam", "life", "Holy Quran", "sunnah", "State", "arabic", "unity", "Islamic", "moral", "organisation", "zakat", "ushr", "auqaf", "mosque"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Promotion of local Government institutions",    
+"number": "32",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["State", "local", "Government", "institutions", "elected", "representatives", "area", "peasants", "worker", "women"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Parochial and other similar prejudices to be discouraged",    
+"number": "33",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["State", "Parochial", "racial", "Tribal", "sectarian", "Provincial", "prejudices", "citizens"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Full participation of women in national life",    
+"number": "34",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["participation", "women", "sphere", "national", "life"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Protection of family , etc",    
+"number": "35",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["State", "protection", "marriage", "family", "mother", "children"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Protection of minorities",    
+"number": "36",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["State", "Safeguard", "legitimate", "rights", "interests", "minorities", "representatives", "Federal", "Provincial"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Promotion of social justice and eradication of social evils",    
+"number": "37",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["promote", "special", "educational", "economic", "interests", "areas", "illiteracy", "free", "education", "technical", "professional", "merit", "justice", "secure", "humane", "worker", "children", "women", "employee", "age", "sex", "employment", "agriculture", "industry", "development", "prostitution", "gambling", "drugs", "publication", "alcohol", "medicine", "non-muslim", "Government", "administration", "business", "public" ],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Promotion of social and economic well-being of the people",    
+"number": "38",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "2010",
+
+"tags":["secure", "people", "sex", "caste", "creed", "race", "wealth", "production", "interests", "equitable", "rights", "employee", "empployer", "landlords", "tenants", "citizens", "resources", "country", "leisure", "Pakistan", "social", "Security", "insurance", "basic", "necessities", "life", "food", "clothing", "housing", "education", "medical", "earn", "unemployment", "disparity", "income", "individuals", "class", "riba", "Provincial", "Federal", "services", "autonomous", "corporation", "Government", "omission", "allocation"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Participation of people in Armed Forces",    
+"number": "39",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["State", "people", "Pakistan", "armed forces"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+},
+
+{
+"title": "Strengthening bonds with Muslim world and promoting international peace",    
+"number": "40",
+"chaptername": "Principles of Policy",
+"chapternum" : 2,
+"text" : "",
+
+"lastmodified": "1973",
+
+"tags":["Muslim", "international", "peace", "State", "Strengthening", "Preservation", "relations", "countries", "Islamic", "unity", "interests", "asia", "africa", "latin america", "Security", "friendly", "nations", "settlement", "disputes", "peaceful"],
+"category": ["Freedom", "Principles of Policy", "fundamental rights"],
+"crowdsource":[]
+
+}
+
+]
+}

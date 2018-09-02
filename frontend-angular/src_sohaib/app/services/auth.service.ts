@@ -8,13 +8,36 @@ export class AuthService {
 	authtoken:any;
 	user:any;
   article:any;
-  allarticles:Array<string>;
+  allarticles:any;
+  filteredarticles:any;
+  articletoshow:any;
+  
 
   constructor(private http:Http) { 
 this.allarticles=[];
+this.articletoshow= [];
 
   }
 
+
+
+getarticletoshow(){
+  return this.articletoshow;
+}
+
+setarticletoshow(a){
+  this.articletoshow=a;
+}
+
+savefilteredarticles(art){
+
+  this.filteredarticles = art;
+}
+
+getfilteredarticles(){
+
+  return this.filteredarticles;
+}
 
 savearticles(articles){
   
@@ -106,13 +129,11 @@ this.loadToken();
     
   let headers = new Headers();
   headers.append('Content-Type','application/json');
-  var queryarray = query.split(" ");
+  //var queryarray = query.split(" ");
   //console.log(queryarray)
-  const tags = {
-  searchtags : queryarray
-  }
+  
 
-return this.http.post('http://localhost:4000/articles/search',tags,{headers:headers}).map(res => res.json())
+return this.http.post('http://localhost:4000/articles/search',query,{headers:headers}).map(res => res.json())
 
   }
 

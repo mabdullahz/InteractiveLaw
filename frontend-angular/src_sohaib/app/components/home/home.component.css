@@ -60,6 +60,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #10161A;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 1; /* Firefox */
+}
+
 h1 {
     font-size: 54px;
 }
@@ -111,6 +116,8 @@ a:hover, a:focus {
     background-color: #6195FF;
     color: #FFF;
 }
+
+.mouse{ cursor: pointer; }
 
 ul, ol {
     margin: 0;

@@ -44,6 +44,11 @@ Table OF Contents
 
 /* -- typography -- */
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 1; /* Firefox */
+}
+
 body {
     font-family: 'Varela Round', sans-serif;
     font-size: 16px;
@@ -63,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 54px;
 }
+
 
 h2 {
     font-size: 36px;
@@ -123,6 +129,8 @@ ul, ol {
 .section {
     position: relative;
 }
+
+.mouse{ cursor: pointer; }
 
 .md-padding {
     padding-top: 120px;

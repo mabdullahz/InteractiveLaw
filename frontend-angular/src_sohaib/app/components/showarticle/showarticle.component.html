@@ -1,0 +1,245 @@
+<!-- Nav -->
+<div id="nav" class="navbar nav-transparent">
+  <div class="container"  style="background-color:  rgb(80, 54, 33); min-width: 100%;">
+
+      <div class="navbar-header">
+          <!-- Logo -->
+          <div class="navbar-brand">
+          <ul class="main-nav nav navbar-nav navbar-left">
+          <li><a href="" style="font-size:30px;">Interactive Law</a></li>
+<!-- 
+          <li><form class="form-inline my-2 my-lg-0" >
+<input   name="search" class="form-control mr-lg-4" type="text" placeholder="Search Article" aria-label="Search" (change) = "search($event)"  (keyup.enter)="onEnterSearch()">
+
+</form> </li>
+<li style="margin-top:5px;"> <button  class="btn btn-outline-success" type="submit" (click) = "clicked()">Search</button></li> -->
+
+
+          </ul>
+
+
+          </div>
+          <!-- /Logo -->
+
+          <!-- Collapse nav button -->
+          
+          <!-- /Collapse nav button -->
+      </div>
+
+      <!--  Main navigation  -->
+      <ul class="main-nav nav navbar-nav navbar-right">
+          <li><a href="">Home</a></li>
+          <li><a class="mouse" (click) = "goback()">GO BACK TO SEARCH</a></li>
+
+          
+          <li> <a class="mouse" [routerLink] = "['/profile']" *ngIf="authService.isloggedin()"> Profile</a> </li>
+      </ul>
+
+      <!-- /Main navigation -->
+
+  </div>
+          <!-- Nav -->
+         
+          <!-- /Nav -->
+</div>
+
+      <div id="articledetail">
+
+          <div *ngIf="articletoshow" class="container">
+          <div id="blog">
+        
+            <!-- Container -->
+            <div class="container">
+        
+              <!-- Row -->
+              <div class="row">
+        
+                <!-- Main -->
+                   <aside id="aside" class="col-md-3">
+        
+                  <!-- Search -->
+                  
+                  <!-- /Search -->
+        
+                  <!-- Category -->
+                  <div class="widget">
+                    <h3 class="title">DirectLinks</h3>
+                    <div class="widget-category">
+                      <a href="http://www.pakistani.org/pakistan/constitution/">Constitution of Pakistan</a>
+                      <a href="http://www.urdupdfbooks.com/2012/11/the-1973-constitution-of-pakistan-urdu.html">Urdu Version of Constitution</a>
+                      
+                    </div>
+                  </div>
+        
+                  <div class="widget">
+                    <h3 class="title">Dictionary</h3>
+                    <div class="widget-category">
+                      <input   name="search" class="form-control mr-lg-4" type="text" placeholder="Find Meaning" aria-label="Search" (change) = "searchformeaning($event)" (keyup.enter)="onEnter()">
+                      <button  class="btn btn-outline-success" type="submit" (click) = "meaningclicked()">Find</button>
+                    </div>
+                  </div>
+        
+                  <div *ngIf="word" class="widget">
+                    <h3 class="title">Meaning</h3>
+                    <div class="widget-category">
+                      {{meaning}}
+                    </div>
+                  </div>
+                  <!-- /Category -->
+        
+                  <!-- Posts sidebar -->
+                  <div class="widget">
+                    <h3 class="title">Ammendments</h3>
+        
+                    <!-- single post -->
+                    <div class="widget-post">
+                      <a href="#">
+                        <i class="fa fa-gavel fa-4x" style="width:86px; height:60px;"> </i> Ammendment #1
+                      </a>
+                      <ul class="blog-meta">
+                        <li>Oct 18, 1999</li>
+                      </ul>
+                    </div>
+                    <!-- /single post -->
+        
+                    <!-- single post -->
+                    <div class="widget-post">
+                      <a href="#">
+                        <i class="fa fa-gavel fa-4x" style="width:86px; height:60px;"> </i> Ammendment #1
+                      </a>
+                      <ul class="blog-meta">
+                        <li>Oct 18, 2000</li>
+                      </ul>
+                    </div>
+                    <!-- /single post -->
+        
+        
+                    <!-- single post -->
+                    <div class="widget-post">
+                      <a href="#">
+                        <i class="fa fa-gavel fa-4x" style="width:86px; height:60px;"> </i> Ammendment #1
+                      </a>
+                      <ul class="blog-meta">
+                        <li>Oct 18, 1987</li>
+                      </ul>
+                    </div>
+                    <!-- /single post -->
+        
+                  </div>
+                  <!-- /Posts sidebar -->
+        
+                  <!-- Tags -->
+             
+                  <!-- /Tags -->
+        
+                </aside>
+                <main id="main" class="col-md-9">
+                  <div class="blog">
+                    <div class="blog-content">
+                      <ul class="blog-meta">
+                        <!-- <li><i class="fa fa-user"></i>John doe</li>
+                        <li><i class="fa fa-clock-o"></i>18 Oct</li>
+                        <li><i class="fa fa-comments"></i>57</li> -->
+                      </ul>
+                      <div class="section-header text-center">
+                            <h2 class="title">{{articletoshow.title}}</h2>
+                            <h2 class="title">Article: {{articletoshow.number}}</h2>
+        
+                        </div>
+                      <p *ngFor ="let t of articletoshow.text"> <!-- span style="background-color: #FFFF00">Women</span> -->
+                      {{t}}
+                      </p>
+                    </div>
+        
+                    <!-- blog tags -->
+                    <div class="blog-tags">
+                      <h5>Tags :</h5>
+                       <!-- <a class = "mouse" id="{{t}}" (click)="tagclick($event)" *ngFor= "let t of articletoshow.tags">{{t}}</a> -->
+
+                       <a class = "mouse" id="{{articletoshow.tags[n]}}" (click)="tagclick($event)" *ngFor= "let n of [0,1,2,3,4,5,6,7,8,9]">{{articletoshow.tags[n]}}</a>
+                    </div>
+                    <div class="blog-tags">
+                      <h5>Last Modified : </h5> <div style="display:inline; font-size:15px"> {{articletoshow.lastmodified}} </div> 
+                    </div>
+                    <div class="blog-tags">
+                      <h5>Chapter Number : </h5> <div style="display:inline; font-size:15px"> {{articletoshow.chapternum}} </div> 
+                    </div>
+                    <div class="blog-tags">
+                      <h5>Chapter Name : </h5> <div style="display:inline; font-size:15px"> {{articletoshow.chaptername}} </div> 
+                    </div>
+        
+                    <br>
+                    <br>
+        
+                    <div *ngIf="articletoshow" class="container">
+            <div class="row">
+                
+                <div *ngFor = "let comm of articletoshow.crowdsource" class="col-sm-8">
+                    <div class="panel panel-white post panel-shadow">
+                        <div class="post-heading">
+                            <div class="pull-left image">
+                                <img src="assets/me.jpg" class="img-circle avatar" alt="user profile image">
+                            </div>
+                            <div class="pull-left meta">
+                                <div class="title h5">
+                                    <a href="#"><b>{{comm.username}}</b></a>
+                                    made a Contribution.
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <p>{{comm.date}}</p>
+                                      </div>
+                                      <div class="col-md-8">
+                                       <p> <strong> Language: </strong> {{comm.language}}</p>
+                                      </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="post-description"> 
+                            <p>{{comm.contrib}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                     
+                    <!-- blog tags -->
+        
+                  
+                    <!-- /blog author -->
+        
+                    <!-- blog comments -->
+                               <!-- /blog comments -->
+        
+                    <!-- reply form -->
+                    
+                    <!-- /reply form -->
+                  </div>
+                </main>
+                <!-- /Main -->
+        
+        
+                <!-- Aside -->
+             
+                <!-- /Aside -->
+        
+              </div>
+              <!-- /Row -->
+        
+               
+            </div>
+            <!-- /Container -->
+            
+           
+        
+        
+          </div>
+          </div>
+          </div>
+      
+
+      
+
