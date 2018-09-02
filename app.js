@@ -20,7 +20,7 @@ var swearjar = require('swearjar');
 
 
 // Connect To Database
-mongoose.connect(config.database);
+mongoose.connect(config.database, { useNewUrlParser: true });
 
 // On Connection
 mongoose.connection.on('connected', () => {
@@ -59,57 +59,37 @@ app.use('/users', users);
 app.use('/articles',articles)
 
 
-
-
-
-
 // Index Route
 app.get('/', (req, res) => {
   res.send('Invalid Endpoint');
 });
 
-
-
-
 app.post('/checkbadword',(req,res)=>{
-
-var word = req.body.word
-
-//word is actually the list of words
-
-var newword = word.map(w => swearjar.profane(w))
-if (newword.includes(true))
-{
-res.json({badword:true})
-}else{
-	res.json({badword:false})
-}
-
-
-
+  var word = req.body.word
+  //word is actually the list of words
+  var newword = word.map(w => swearjar.profane(w))
+  if (newword.includes(true))
+  {
+    res.json({badword:true})
+  }else{
+    res.json({badword:false})
+  }
 })
 
-
+// Post Meaning of Word
 app.post('/meaning',(req,res)=>{
-
-
-var word = req.body.word
-console.log("AGYAAAAA")
-word.toLowerCase();
-wordnet.lookup(word, function(err, definitions) {
-
-	if(err){
-		return res.json({check:false})
-	}
-   res.json({check:true, meaning:definitions[0].glossary});
-  
-});
-
-
+  var word = req.body.word
+  console.log("Look up meaning for: ", word);
+  word.toLowerCase();
+  wordnet.lookup(word, function(err, definitions) {
+    
+    if(err){
+      return res.json({check:false})
+    }
+    res.json({check:true, meaning:definitions[0].glossary});
+    
+  });
 })
-
-
-
 
 // Start Server
 app.listen(port,() => {
